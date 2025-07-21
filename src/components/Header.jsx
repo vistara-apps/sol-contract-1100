@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { Contract, Home, Plus, BarChart3, Wallet, LogOut } from 'lucide-react';
+import { ContactRound, Home, Plus, BarChart3, Wallet, LogOut } from 'lucide-react';
 
 const Header = () => {
   const location = useLocation();
@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <Contract className="w-8 h-8 text-white" />
+            <ContactRound className="w-8 h-8 text-white" />
             <span className="text-xl font-bold text-white">SolContract</span>
           </Link>
 
