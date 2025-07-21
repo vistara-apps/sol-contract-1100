@@ -35,31 +35,31 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 pb-16">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Smart Contracts for
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mt-2">
               B2B Creator Collabs
             </span>
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             SolContract simplifies the creation and execution of smart contracts for brand-creator 
             collaborations, ensuring trust, transparency, and efficient payments on Solana.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {connected ? (
-              <Link to="/builder" className="btn-primary text-lg px-8 py-4">
+              <Link to="/builder" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto">
                 Create Your First Contract
                 <ArrowRight className="w-5 h-5" />
               </Link>
             ) : (
-              <div className="btn-primary text-lg px-8 py-4 opacity-75 cursor-not-allowed">
+              <div className="btn-primary text-lg px-8 py-4 opacity-75 cursor-not-allowed w-full sm:w-auto">
                 Connect Wallet to Start
               </div>
             )}
-            <Link to="/dashboard" className="btn-secondary text-lg px-8 py-4">
+            <Link to="/dashboard" className="btn-secondary text-lg px-8 py-4 w-full sm:w-auto">
               View Demo
             </Link>
           </div>
@@ -77,14 +77,14 @@ const HomePage = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="card text-center">
+              <div key={index} className="card text-center hover:transform hover:scale-105 transition-transform duration-200">
                 <Icon className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             );
           })}

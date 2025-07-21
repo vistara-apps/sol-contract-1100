@@ -12,7 +12,7 @@ function App() {
     <AppProvider>
       <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800">
         <Header />
-        <main>
+        <main className="relative">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/builder" element={<ContractBuilder />} />
